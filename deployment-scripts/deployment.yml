@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kyosk-interview-app #The name of the app being spawned
+spec:
+  replicas: 1 #The number of pod replicas to spawn within the server
+  selector:
+    matchLabels:
+      app: kyosk-interview-app
+  template:
+    metadata:
+      labels:
+        app: kyosk-interview-app
+    spec:
+      containers:
+      - name: kyosk-interview-app # The name of the container
+        image: kyoskinterview/interview-demo:latest # the docker image where its hosted
+        ports:
+        - containerPort: 80 # the port to expose in the contaner

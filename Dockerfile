@@ -20,7 +20,6 @@ ENV VERTICLE_HOME /work/application
 ENV VERTICLE_FILE /target/demo-0.0.1-SNAPSHOT.jar
 
 ENV FILE demo-0.0.1-SNAPSHOT.jar
-
 EXPOSE 8080
 
 WORKDIR ${VERTICLE_HOME}
@@ -32,3 +31,6 @@ CMD ["exec java  -Xms512m -Xmx2g  -jar $FILE"]
 #  docker build -f Dockerfile -t kyosk/interview-demo:latest .
 
 # docker run -d --name kyosk_interview --restart unless-stopped -p 8080:8080  kyosk/interview-demo:latest
+
+# docker run -d --name kyosk_interview --restart unless-stopped -p 8080:8080  kyoskinterview/interview-demo:latest
+

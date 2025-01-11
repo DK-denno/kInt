@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service #Tells minikube the type of resource to run, service, deployment etc
+metadata:
+  name: kyosk-interview-service #this is the service name
+spec:
+  selector:
+    app:  kyosk-interview-app 
+  ports:
+    - protocol: TCP 
+      port: 80 #The port to launch on
+      targetPort: 80
+  type: NodePort
