@@ -78,4 +78,3 @@
     -
 - The main trigger is a push or merge to the main branch.
 - The code auto builds and pushes to the docker hub acc set up in the secrets on github
-
